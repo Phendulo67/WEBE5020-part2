@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Apply to Monochrome Modelling Agency."><title>Enquiries | Monochrome</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="site-header">
+    <div class="header-inner">
+        <img class="logo" src="_images/logo.png" alt="Monochrome logo">
+        <picture>
+            <source media="(max-width: 600px)" srcset="_images/responsive/banner-600w.jpg">
+            <img class="banner" src="_images/responsive/banner-1366w.jpg"
+                 srcset="_images/responsive/banner-600w.jpg 600w, _images/responsive/banner-1000w.jpg 1000w, _images/responsive/banner-1366w.jpg 1366w"
+                 sizes="(max-width: 600px) 100vw, 1200px" alt="Black and white Monochrome modelling banner">
+        </picture>
+        <div class="site-nav">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
+            <nav aria-label="Main navigation">
+                <ul id="main-menu">
+                    <li><a class="" href="index.html">Home</a></li>
+                    <li><a class="" href="about.html">About</a></li>
+                    <li><a class="" href="models.html">Models</a></li>
+                    <li><a class="active" href="enquiries.html">Enquiries</a></li>
+                    <li><a class="" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header><main><section class="hero"><h1>Model Enquiry</h1><p class="subtitle">Interested in becoming part of Monochrome?</p><hr class="divider"></section>
+<form class="form-container"><div class="form-group"><label for="name">Full Name</label><input id="name" type="text" name="name" autocomplete="name" required></div>
+<div class="form-group"><label for="email">Email Address</label><input id="email" type="email" name="email" autocomplete="email" required></div>
+<div class="form-group"><label for="phone">Phone Number</label><input id="phone" type="tel" name="phone" autocomplete="tel"></div>
+<div class="form-group"><label for="age">Age</label><input id="age" type="number" name="age" min="1" max="100"></div>
+<div class="form-group"><label for="reason">Tell us about yourself</label><textarea id="reason" name="reason" rows="6" placeholder="Tell us about your experience, interests and the type of modelling you are interested in."></textarea></div>
+<input type="submit" value="Submit Enquiry"></form></main><footer>
+    <div class="footer-mark">M</div>
+    <div class="footer-links">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="models.html">Models</a>
+        <a href="enquiries.html">Enquiries</a><a href="contact.html">Contact</a>
+    </div>
+    <p>&copy; 2026 Monochrome Modelling Agency · The Purity of Beauty</p>
+</footer>
+<script>
+const toggle = document.querySelector(".nav-toggle");
+const menu = document.querySelector("#main-menu");
+if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+        const open = menu.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", open);
+        toggle.textContent = open ? "Close" : "Menu";
+    });
+}
+</script></body></html>
